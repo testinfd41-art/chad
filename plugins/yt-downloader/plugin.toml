@@ -1,0 +1,47 @@
+id = "dxryk/yt-downloader"
+name = "YouTube Downloader"
+version = "1.0.0"
+plugin_api = 3
+author = "dxryk"
+license = "MIT"
+icon = "download"
+description = "Paste a YouTube link, download it at the highest available quality via yt-dlp, with a live progress bar."
+tags = ["download", "media"]
+dependencies = ["yt-dlp", "ffmpeg"]
+
+[[setting]]
+key = "output_dir"
+type = "folder"
+label_key = "settings.output_dir.label"
+default = "~/Downloads"
+
+[[setting]]
+key = "max_height"
+type = "int"
+label_key = "settings.max_height.label"
+description_key = "settings.max_height.description"
+default = 0
+min = 0
+max = 8000
+
+[[setting]]
+key = "audio_only"
+type = "bool"
+label_key = "settings.audio_only.label"
+description_key = "settings.audio_only.description"
+default = false
+
+[[widget]]
+id = "bar"
+entry = "widget.luau"
+
+[[panel]]
+id = "panel"
+entry = "panel.luau"
+width = 420
+height = 320
+placement = "attached"
+
+[[service]]
+id = "downloader"
+entry = "service.luau"

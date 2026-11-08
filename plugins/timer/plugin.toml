@@ -1,0 +1,32 @@
+id = "chris/timer"
+name = "Timer"
+version = "3.1.1"
+plugin_api = 20
+author = "chris"
+license = "MIT"
+icon = "clock"
+description = "Plain countdown timer with presets and completion sound."
+tags = ["Productivity", "Bar", "Panel"]
+
+[[setting]]
+key = "play_sound"
+type = "bool"
+label_key = "settings.play_sound.label"
+default = true
+
+# Background engine: fires the "time is up" notification and sound, so the
+# alarm works even when the bar widget is hidden and the panel is closed.
+[[service]]
+id = "engine"
+entry = "service.luau"
+
+[[widget]]
+id = "bar"
+entry = "widget.luau"
+
+[[panel]]
+id = "panel"
+entry = "panel.luau"
+width = 320
+height = 380
+placement = "attached"

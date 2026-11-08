@@ -1,0 +1,13 @@
+   id = "chris/appname"
+   name = "App Name"
+   version = "1.0.0"
+   plugin_api = 20
+   author = "chris"
+   license = "MIT"
+   icon = "app-window"
+   description = "Shows only the focused app's name (event-driven via niri)."
+   tags = ["Bar"]
+
+   [[widget]]
+   id = "bar"
+   entry = "widget.luau"

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+tmp=$(mktemp --suffix=.png)
+cat > "$tmp"
+dest=$(zenity --file-selection --save --title="Save screenshot" \
+  --filename="$HOME/Pictures/Screenshots/shot-$(date +%F_%H-%M-%S).png")
+if [ -n "$dest" ]; then mv "$tmp" "$dest"; else rm -f "$tmp"; fi

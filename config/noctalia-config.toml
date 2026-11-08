@@ -1,0 +1,570 @@
+[audio]
+enable_volume_sounds = false
+sound_volume = 0.99999997764825821
+
+[backdrop]
+enabled = true
+tint_intensity = 0.19999999552965164
+
+[bar.default]
+background_opacity = 0.59999998658895493
+center = [ "cpu", "temp", "ram", "group:g2" ]
+concave_edge_corners = false
+end = [
+    "privacy",
+    "tray",
+    "bar_4",
+    "screenshot",
+    "clipboard",
+    "wallpaper",
+    "bar_2",
+    "bar",
+    "caffeine",
+    "volume",
+    "bluetooth",
+    "network",
+    "battery",
+    "control-center",
+    "clock"
+]
+font_family = "SF Pro Rounded"
+font_weight = 700
+margin_ends = 0
+padding = 8
+radius = 0
+start = [ "launcher", "workspaces", "active_window", "bar_3", "WindowSwitcher", "group:g1", "group:g4", "media" ]
+widget_spacing = 7
+
+    [bar.default.dead_zone.actions]
+    middle = "dock-toggle"
+    scroll_up = "exec noctalia msg config-reload"
+
+    [[bar.default.capsule_group]]
+    accordion = true
+    accordion_direction = "end"
+    accordion_duration = 150
+    border_width = 0.0
+    enabled = true
+    fill = "surface_container"
+    id = "g4"
+    members = [ "ew", "brightness", "theme_mode", "notifications", "power_profile", "input_volume" ]
+    opacity = 0.0
+    padding = 0.0
+
+    [[bar.default.capsule_group]]
+    accordion = true
+    accordion_direction = "end"
+    accordion_duration = 150
+    border_width = 0.0
+    enabled = true
+    fill = "surface_container"
+    id = "g1"
+    members = [ "workstat", "bar_5" ]
+    opacity = 0.0
+    padding = 0.0
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    border_width = 0.0
+    enabled = true
+    fill = "surface_container"
+    id = "g2"
+    members = [ "sysmon", "network_rx", "network_tx" ]
+    opacity = 0.0
+    padding = 0.0
+
+[battery]
+warning_threshold = 25
+
+    [battery.device."/org/freedesktop/UPower/devices/headset_dev_B9_EB_B8_F5_5A_50"]
+    warning_threshold = 30
+
+[bluetooth]
+connect_when_enabled = true
+connection_notifications = true
+
+[brightness]
+enable_ddcutil = true
+
+[calendar]
+
+[control_center.calendar]
+show_events_card = false
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "mic_mute"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[[control_center.shortcuts]]
+type = "dark_mode"
+
+[desktop_widgets]
+enabled = false
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[dock]
+background_opacity = 0.4999999888241291
+cross_axis_padding = 2
+enabled = false
+icon_size = 35
+inactive_opacity = 0.99999997764825821
+inactive_scale = 1.0
+item_spacing = 4
+launcher_custom_image = "/home/chris/nixos-dotfiles/config/fastfetch/NixOS.svg"
+launcher_custom_image_colorize = true
+launcher_icon = "medical-cross"
+magnification_scale = 2.0
+main_axis_padding = 4
+margin_edge = 6
+pinned = [
+    "md.obsidian.Obsidian",
+    "firefox",
+    "foot",
+    "spotify",
+    "org.gimp.GIMP",
+    "dev.zed.Zed",
+    "helium",
+    "org.gnome.Nautilus",
+    "org.gnome.Software",
+    "chromium-browser"
+]
+position = "left"
+radius = 12
+reserve_space = false
+show_dots = true
+smart_auto_hide = true
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 30
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = false
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 300.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = false
+    timeout = 660.0
+
+[lockscreen]
+fingerprint = false
+transition = [ "disc", "golden", "melt", "pixel", "stripes", "vortex", "wipe" ]
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@HDMI-A-1",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002",
+    "lockscreen-widget-0000000000000003",
+    "lockscreen-widget-0000000000000004"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 969.00006103515625
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_container"
+        background_opacity = 0.0
+        background_radius = 12.0
+        center_password_text = true
+        input_opacity = 0.0
+        input_radius = 0.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = false
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 70.0
+    box_width = 400.0
+    cx = 960.0
+    cy = 969.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_container"
+        background_opacity = 0.0
+        background_radius = 12.0
+        center_password_text = true
+        input_opacity = 0.0
+        input_radius = 6.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = false
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 384.0
+    box_width = 752.0
+    cx = 960.0
+    cy = 268.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        background_opacity = 0.0
+        background_padding = 0
+        background_radius = 32
+        center_text = true
+        font_family = "JetBrainsMonoNL NFM ExtraBold"
+        format = "{:%H:%M}"
+        shadow = true
+        timezone = ""
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 64.0
+    box_width = 1248.0
+    cx = 960.0
+    cy = 412.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background_opacity = 0.0
+        font_family = ""
+        format = "{:%A  %b %d}"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000003]
+    box_height = 480.0
+    box_width = 848.0
+    cx = 960.0
+    cy = 204.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000003.settings]
+        background = false
+        font_family = "JetBrainsMono NFP ExtraBold"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000004]
+    box_height = 48.0
+    box_width = 640.0
+    cx = 960.0
+    cy = 356.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000004.settings]
+        background = false
+        format = "{:%A %b %d }"
+
+[notification]
+background_opacity = 0.4999999888241291
+layer = "overlay"
+
+[osd]
+background_opacity = 0.4999999888241291
+offset_y = 20
+position_vertical = "bottom_center"
+
+[plugins]
+enabled = [
+    "chris/timer",
+    "dxryk/yt-downloader",
+    "local/active-app-name",
+    "chris/appname",
+    "chris/obsidian",
+    "chris/cursor-switcher"
+]
+
+    [[plugins.source]]
+    enabled = false
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    enabled = false
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+[shell]
+app_icon_color = "primary_container"
+avatar_path = "/home/chris/Pictures/memes/Screenshot from 2026-08-28 00-44-31.png"
+corner_radius_scale = 0.70000001043081284
+font_family = "SF Pro"
+
+    [shell.launcher]
+    category_icons_only = true
+    default_view = "all"
+    show_session_button = false
+    show_settings_button = false
+
+        [shell.launcher.providers.calculator]
+        global = false
+
+        [shell.launcher.providers.emoji]
+        global = false
+
+    [shell.mpris]
+    blacklist = [ "firefox", "brave", "helium" ]
+
+    [shell.panel]
+    transparency_mode = "glass"
+
+    [shell.screenshot]
+    copy_to_clipboard = true
+    pipe_command = "/home/chris/.local/bin/shot-saveas"
+    pipe_to_command = true
+    save_to_file = false
+
+    [shell.window_switcher]
+    mru = true
+
+[theme]
+builtin = "Gruvbox"
+community_palette = "Gruvbox Material Medium"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "niri" ]
+    enable_community_templates = false
+
+[wallpaper]
+directory = "/home/chris/walls"
+transition = [ "disc", "golden", "melt", "pixel", "stripes", "vortex", "wipe" ]
+
+    [wallpaper.default]
+    path = "/home/chris/walls/IMG_20261102_220738_233.jpg"
+
+    [wallpaper.last]
+    path = "/home/chris/walls/IMG_20261102_220738_233.jpg"
+
+    [wallpaper.monitors.HDMI-A-1]
+    path = "/home/chris/walls/IMG_20261102_220738_233.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/chris/walls/IMG_20261102_220738_233.jpg"
+
+[weather]
+enabled = false
+
+[widget.WindowSwitcher]
+font_family = "SF Pro Text"
+font_weight = 400
+glyph = ""
+label = "Winswi"
+type = "custom_button"
+
+    [widget.WindowSwitcher.actions]
+    left = "window-switcher"
+    right = "exec niri msg action toggle-overview"
+
+[widget.active_window]
+display = "icon_only"
+enabled = false
+icon_size = 17
+max_length = 40
+min_length = 0
+
+[widget.audio_visualizer]
+bands = 128
+
+[widget.bar]
+capsule_border_width = 0.5
+capsule_fill = "on_surface"
+capsule_radius = 10
+font_scale = 0.85000000000000009
+scale = 1.1000000000000001
+type = "chris/timer:bar"
+
+[widget.bar_2]
+type = "dxryk/yt-downloader:bar"
+
+[widget.bar_3]
+font_family = "SF Pro"
+font_weight = 600
+type = "chris/appname:bar"
+
+[widget.bar_4]
+type = "chris/obsidian:bar"
+
+[widget.bar_5]
+type = "chris/cursor-switcher:bar"
+
+[widget.battery]
+display_mode = "graphic"
+font_family = "SF Pro"
+
+[widget.brightness]
+show_label = false
+
+[widget.caffeine]
+scale = 1.1000000000000001
+
+[widget.clipboard]
+glyph = "brand-github-filled"
+scale = 1.1000000000000001
+
+[widget.clock]
+font_family = "SF Pro Rounded"
+font_weight = 600
+format = "{:%a %d %b}  {:%H:%M}"
+
+[widget.control-center]
+enabled = false
+glyph = "cross"
+
+    [widget.control-center.actions]
+    right = "settings-open"
+
+[widget.cpu]
+capsule_radius = 8
+
+[widget.ew]
+font_family = "SF Pro Text"
+font_weight = 400
+glyph = ""
+label = "RemoteUS"
+type = "custom_button"
+
+[widget.input_volume]
+show_label = false
+
+[widget.keyboard_layout]
+scale = 1.1000000000000001
+show_label = false
+
+[widget.launcher]
+custom_image = "/home/chris/nixos-dotfiles/config/fastfetch/Nixos.webp"
+custom_image_colorize = true
+glyph = ""
+scale = 1.2
+
+    [widget.launcher.actions]
+    right = "exec noctalia msg panel-toggle session"
+
+[widget.lock_keys]
+show_scroll_lock = true
+
+[widget.media]
+art_size = 17
+font_family = "SF Pro Text"
+font_weight = 500
+hide_when_no_media = true
+max_length = 300
+
+[widget.network]
+scale = 1.1000000000000001
+show_label = false
+show_vpn_label = true
+
+[widget.privacy]
+active_color = "on_surface"
+capsule = true
+capsule_fill = "#FF9500"
+hide_inactive = true
+icon_spacing = 5
+
+[widget.screenshot]
+custom_image = "/home/chris/nixos-dotfiles/config/fastfetch/claude-ai-logo.png"
+scale = 1.1000000000000001
+
+    [widget.screenshot.actions]
+    left = "exec noctalia msg screenshot-annotate"
+
+[widget.sysmon]
+stat = "disk_used_pct"
+
+[widget.tray]
+drawer_item_size = 8.0
+hidden = [ "udiskie" ]
+hide_passive = false
+
+[widget.volume]
+show_label = false
+
+[widget.wallpaper]
+glyph = "palette"
+scale = 1.1500000000000001
+
+[widget.weather]
+show_condition = false
+
+[widget.workspaces]
+active_pill_size = 2.7000000000000002
+label_source = "name"
+max_label_chars = 15
+pill_scale = 0.80000000000000004
+show_icons = false
+show_labels = false
+
+[widget.workstat]
+font_family = "SF Pro Text"
+font_weight = 400
+glyph = ""
+label = "Nythera"
+type = "custom_button"

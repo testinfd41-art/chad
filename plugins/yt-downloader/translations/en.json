@@ -1,0 +1,7 @@
+{
+  "settings.output_dir.label": "Download folder",
+  "settings.max_height.label": "Max resolution (height, px)",
+  "settings.max_height.description": "0 = unlimited / best available quality",
+  "settings.audio_only.label": "Audio only",
+  "settings.audio_only.description": "Extract the best audio track only, skip video entirely"
+}

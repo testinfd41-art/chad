@@ -1,0 +1,20 @@
+id = "chris/obsidian"
+name = "Obsidian"
+version = "1.0.0"
+plugin_api = 24
+author = "chris"
+license = "MIT"
+icon = "notebook-pen"
+description = "Obsidian vault quick access, search and editing."
+tags = ["Productivity", "Notes", "Panel"]
+
+[[widget]]
+id = "bar"
+entry = "widget.luau"
+
+[[panel]]
+id = "panel"
+entry = "panel.luau"
+width = 400
+height = 480
+placement = "attached"
